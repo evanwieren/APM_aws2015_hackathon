@@ -1,0 +1,5 @@
+{
+   "code_description": "Session Closed User Error", 
+   "code": 490, 
+   "error": "Session was closed. Reason: Stream was 0 bytes but needs to be at least 100 bytes."
+}
