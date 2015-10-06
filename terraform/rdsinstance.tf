@@ -9,6 +9,7 @@ resource "aws_db_instance" "APMRDS" {
     password = "${var.db_passwd}"
     db_subnet_group_name = "rds1"
     parameter_group_name = "default.mysql5.6"
+    vpc_security_group_ids = ["${aws_security_group.appserver.id}","${aws_security_group.BounceBox.id}"]
 }
 resource "aws_db_subnet_group" "rds1" {
     name = "rds1"

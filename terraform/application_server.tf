@@ -10,6 +10,10 @@ resource "aws_instance" "appserver1" {
         Name = "appserver1"
     }
 }
+resource "aws_eip" "appserver1eip" {
+    instance = "${aws_instance.appserver1.id}"
+    vpc = true
+}
 resource "aws_instance" "appserver2" {
     ami = "ami-9f92edfa"
     instance_type = "t2.medium"
@@ -21,4 +25,8 @@ resource "aws_instance" "appserver2" {
     tags {
         Name = "appserver2"
     }
+}
+resource "aws_eip" "appserver2eip" {
+    instance = "${aws_instance.appserver2.id}"
+    vpc = true
 }
