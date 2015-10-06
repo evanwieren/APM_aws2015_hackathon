@@ -1,0 +1,5169 @@
+2015/10/06 12:55:52 [INFO] Terraform version: 0.6.2  
+2015/10/06 12:55:52 Detected home directory from env var: /Users/cmacmurray
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: atlas = /usr/local/bin/terraform-provider-atlas
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: aws = /usr/local/bin/terraform-provider-aws
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: azure = /usr/local/bin/terraform-provider-azure
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: cloudflare = /usr/local/bin/terraform-provider-cloudflare
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: cloudstack = /usr/local/bin/terraform-provider-cloudstack
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: consul = /usr/local/bin/terraform-provider-consul
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: digitalocean = /usr/local/bin/terraform-provider-digitalocean
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: dme = /usr/local/bin/terraform-provider-dme
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: dnsimple = /usr/local/bin/terraform-provider-dnsimple
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: docker = /usr/local/bin/terraform-provider-docker
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: google = /usr/local/bin/terraform-provider-google
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: heroku = /usr/local/bin/terraform-provider-heroku
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: mailgun = /usr/local/bin/terraform-provider-mailgun
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: null = /usr/local/bin/terraform-provider-null
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: openstack = /usr/local/bin/terraform-provider-openstack
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: template = /usr/local/bin/terraform-provider-template
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: terraform = /usr/local/bin/terraform-provider-terraform
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: chef = /usr/local/bin/terraform-provisioner-chef
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: file = /usr/local/bin/terraform-provisioner-file
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: local-exec = /usr/local/bin/terraform-provisioner-local-exec
+2015/10/06 12:55:52 [DEBUG] Discovered plugin: remote-exec = /usr/local/bin/terraform-provisioner-remote-exec
+2015/10/06 12:55:52 Detected home directory from env var: /Users/cmacmurray
+2015/10/06 12:55:52 [DEBUG] Attempting to open CLI config file: /Users/cmacmurray/.terraformrc
+2015/10/06 12:55:52 [DEBUG] File doesn't exist, but doesn't need to. Ignoring.
+2015/10/06 12:55:52 Detected home directory from env var: /Users/cmacmurray
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.VertexTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [INFO] Starting graph walk: walkValidate
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] Starting plugin: /usr/local/bin/terraform-provisioner-remote-exec []string{"/usr/local/bin/terraform-provisioner-remote-exec"}
+2015/10/06 12:55:52 [DEBUG] Waiting for RPC address for: /usr/local/bin/terraform-provisioner-remote-exec
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvider
+2015/10/06 12:55:52 [DEBUG] Starting plugin: /usr/local/bin/terraform-provider-aws []string{"/usr/local/bin/terraform-provider-aws"}
+2015/10/06 12:55:52 [DEBUG] Waiting for RPC address for: /usr/local/bin/terraform-provider-aws
+2015/10/06 12:55:52 terraform-provisioner-remote-exec: 2015/10/06 12:55:52 Plugin address: unix /var/folders/3y/qht22h592h55472gbtf_c3grgty388/T/tf-plugin032352134
+2015/10/06 12:55:52 [DEBUG] Starting plugin: /usr/local/bin/terraform-provisioner-chef []string{"/usr/local/bin/terraform-provisioner-chef"}
+2015/10/06 12:55:52 [DEBUG] Waiting for RPC address for: /usr/local/bin/terraform-provisioner-chef
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 Plugin address: unix /var/folders/3y/qht22h592h55472gbtf_c3grgty388/T/tf-plugin288916130
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_iam_policy.s3userpolicy
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_iam_user.s3user
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_user.s3user
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_vpc.2015AWSHackathon
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_vpc.2015AWSHackathon
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 terraform-provisioner-chef: 2015/10/06 12:55:52 Plugin address: unix /var/folders/3y/qht22h592h55472gbtf_c3grgty388/T/tf-plugin743117453
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateResource, err: Warnings: [${var.2015AWSHackathonS3bucket}: resource name can only contain letters, numbers, dashes, and underscores.
+This will be an error in Terraform 0.4]. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: [${var.2015AWSHackathonS3bucket}: resource name can only contain letters, numbers, dashes, and underscores.
+This will be an error in Terraform 0.4]. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: [${var.2015AWSHackathonS3bucket}: resource name can only contain letters, numbers, dashes, and underscores.
+This will be an error in Terraform 0.4]. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: [${var.2015AWSHackathonS3bucket}: resource name can only contain letters, numbers, dashes, and underscores.
+This will be an error in Terraform 0.4]. Errors: []
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] Starting plugin: /usr/local/bin/terraform-provisioner-file []string{"/usr/local/bin/terraform-provisioner-file"}
+2015/10/06 12:55:52 [DEBUG] Waiting for RPC address for: /usr/local/bin/terraform-provisioner-file
+2015/10/06 12:55:52 terraform-provisioner-file: 2015/10/06 12:55:52 Plugin address: unix /var/folders/3y/qht22h592h55472gbtf_c3grgty388/T/tf-plugin542252311
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_instance.BounceBox
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_instance.BounceBox
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_route_table.PrimaryPublicRouteTable
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_route_table.PrimaryPublicRouteTable
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] Starting plugin: /usr/local/bin/terraform-provisioner-local-exec []string{"/usr/local/bin/terraform-provisioner-local-exec"}
+2015/10/06 12:55:52 [DEBUG] Waiting for RPC address for: /usr/local/bin/terraform-provisioner-local-exec
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateCount
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalValidateCount, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: Warnings: []. Errors: []
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalValidateResource
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws (close): walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws (close): evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2015/10/06 12:55:52 terraform-provisioner-local-exec: 2015/10/06 12:55:52 Plugin address: unix /var/folders/3y/qht22h592h55472gbtf_c3grgty388/T/tf-plugin992487947
+2015/10/06 12:55:52 [DEBUG] vertex root.root: walking
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.VertexTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [INFO] Starting graph walk: walkInput
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvider
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInputProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_iam_user.s3user
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_user.s3user
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_iam_policy.s3userpolicy
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_vpc.2015AWSHackathon
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_vpc.2015AWSHackathon
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_user.s3user: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_iam_policy.s3userpolicy: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_vpc.2015AWSHackathon: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_s3_bucket.${var.2015AWSHackathonS3bucket}: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_instance.BounceBox
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_instance.BounceBox
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_route_table.PrimaryPublicRouteTable
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_route_table.PrimaryPublicRouteTable
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_instance.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_route_table.PrimaryPublicRouteTable: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws (close): walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws (close): evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCloseProvider
+2015/10/06 12:55:52 [DEBUG] vertex root.root: walking
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ConfigTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.OrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.AddOutputOrphanTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+aws_iam_user.s3user
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DisableProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.MissingProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.VertexTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.FlattenTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ProxyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TargetsTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.DestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CreateBeforeDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  aws_iam_policy.s3userpolicy (destroy tainted)
+  aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy tainted)
+  provider.aws
+aws_iam_policy.s3userpolicy (destroy)
+  provider.aws
+aws_iam_user.s3user
+  aws_iam_user.s3user (destroy tainted)
+  aws_iam_user.s3user (destroy)
+  provider.aws
+aws_iam_user.s3user (destroy tainted)
+  provider.aws
+aws_iam_user.s3user (destroy)
+  provider.aws
+aws_instance.BounceBox
+  aws_instance.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy)
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_instance.BounceBox (destroy)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  provider.aws
+aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  provider.aws
+aws_main_route_table_association.a
+  aws_main_route_table_association.a (destroy tainted)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_main_route_table_association.a (destroy)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy tainted)
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket} (destroy)
+  provider.aws
+aws_security_group.BounceBox
+  aws_security_group.BounceBox (destroy tainted)
+  aws_security_group.BounceBox (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_security_group.BounceBox (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_security_group.BounceBox (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_subnet.PrimaryPublic (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy)
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic (destroy tainted)
+  aws_instance.BounceBox (destroy tainted)
+  provider.aws
+aws_subnet.PrimaryPublic (destroy)
+  aws_instance.BounceBox (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon
+  aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_vpc.2015AWSHackathon (destroy)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy tainted)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy tainted)
+  aws_main_route_table_association.a (destroy tainted)
+  aws_route_table.PrimaryPublicRouteTable (destroy tainted)
+  aws_security_group.BounceBox (destroy tainted)
+  aws_subnet.PrimaryPublic (destroy tainted)
+  provider.aws
+aws_vpc.2015AWSHackathon (destroy)
+  aws_internet_gateway.2015AWSHackathon-Gateway (destroy)
+  aws_main_route_table_association.a (destroy)
+  aws_route_table.PrimaryPublicRouteTable (destroy)
+  aws_security_group.BounceBox (destroy)
+  aws_subnet.PrimaryPublic (destroy)
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneDestroyTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.PruneNoopTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProviderTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.CloseProvisionerTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  provider.aws
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+  provider.aws
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.TransitiveReductionTransformer:
+
+aws_iam_policy.s3userpolicy
+  provider.aws
+aws_iam_user.s3user
+  provider.aws
+aws_instance.BounceBox
+  aws_security_group.BounceBox
+  aws_subnet.PrimaryPublic
+  var.key_name
+aws_internet_gateway.2015AWSHackathon-Gateway
+  aws_vpc.2015AWSHackathon
+aws_main_route_table_association.a
+  aws_route_table.PrimaryPublicRouteTable
+aws_route_table.PrimaryPublicRouteTable
+  aws_internet_gateway.2015AWSHackathon-Gateway
+aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+  provider.aws
+  var.2015AWSHackathonS3bucket
+aws_security_group.BounceBox
+  aws_vpc.2015AWSHackathon
+aws_subnet.PrimaryPublic
+  aws_vpc.2015AWSHackathon
+aws_vpc.2015AWSHackathon
+  provider.aws
+provider.aws
+  var.aws_access_key
+  var.aws_secret_key
+  var.region
+provider.aws (close)
+  aws_iam_policy.s3userpolicy
+  aws_iam_user.s3user
+  aws_instance.BounceBox
+  aws_main_route_table_association.a
+  aws_s3_bucket.${var.2015AWSHackathonS3bucket}
+provisioner.chef
+provisioner.file
+provisioner.local-exec
+provisioner.remote-exec
+root
+  provider.aws (close)
+  provisioner.chef
+  provisioner.file
+  provisioner.local-exec
+  provisioner.remote-exec
+  var.vpc_cidr
+  var.vpc_name
+var.2015AWSHackathonS3bucket
+var.aws_access_key
+var.aws_secret_key
+var.key_name
+var.region
+var.vpc_cidr
+var.vpc_name
+2015/10/06 12:55:52 [INFO] Starting graph walk: walkRefresh
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_access_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.2015AWSHackathonS3bucket: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.region: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.chef: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.vpc_cidr: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.key_name: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.local-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.remote-exec: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.var.aws_secret_key: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provisioner.file: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvisioner
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.provider.aws: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInitProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalBuildProviderConfig
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSetProviderConfig
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalConfigProvider
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Building AWS region structure
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Building AWS auth structure
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing IAM Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing DynamoDB connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing ELB connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing S3 connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing SQS connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing SNS connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing RDS Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing Kinesis Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing AutoScaling connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing EC2 Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing ECS Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing Route 53 connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing Elasticache Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing Lambda Connection
+2015/10/06 12:55:52 terraform-provider-aws: 2015/10/06 12:55:52 [INFO] Initializing CloudWatch SDK connection
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalConfigProvider, err: 1 error(s) occurred:
+
+* Failed authenticating with AWS: please verify credentials
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* Failed authenticating with AWS: please verify credentials
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: 1 error(s) occurred:
+
+* Failed authenticating with AWS: please verify credentials
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: 1 error(s) occurred:
+
+* Failed authenticating with AWS: please verify credentials
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_security_group.BounceBox
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_subnet.PrimaryPublic
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_internet_gateway.2015AWSHackathon-Gateway
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_security_group.BounceBox: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalReadState
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalRefresh
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_subnet.PrimaryPublic: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalReadState
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalRefresh
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_internet_gateway.2015AWSHackathon-Gateway: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalReadState
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalRefresh
+2015/10/06 12:55:52 terraform-provider-aws: panic: interface conversion: interface is nil, not *aws.AWSClient
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 42 [running]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/builtin/providers/aws.resourceAwsSecurityGroupRead(0xc20837f380, 0x0, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/builtin/providers/aws/resource_aws_security_group.go:250 +0x64
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/helper/schema.(*Resource).Refresh(0xc20813c940, 0xc20838a120, 0x0, 0x0, 0xc208043f38, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/helper/schema/resource.go:209 +0x475
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/helper/schema.(*Provider).Refresh(0xc20817bce0, 0xc208357dc0, 0xc20838a120, 0x6c05a0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/helper/schema/provider.go:187 +0x1c7
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.(*ResourceProviderServer).Refresh(0xc208142f00, 0xc208371e30, 0xc2080a8580, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/resource_provider.go:345 +0x73
+2015/10/06 12:55:52 terraform-provider-aws: reflect.Value.call(0x87a600, 0xa63300, 0x13, 0xad1c40, 0x4, 0xc2080eff28, 0x3, 0x3, 0x0, 0x0, ...)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/reflect/value.go:419 +0x10e5
+2015/10/06 12:55:52 terraform-provider-aws: reflect.Value.Call(0x87a600, 0xa63300, 0x13, 0xc2080eff28, 0x3, 0x3, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/reflect/value.go:296 +0xbc
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*service).call(0xc20813cf00, 0xc20813cec0, 0xc208158bf8, 0xc208066300, 0xc2081439c0, 0x6c0540, 0xc208371e30, 0x16, 0x6c05a0, 0xc2080a8580, ...)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:382 +0x1f7
+2015/10/06 12:55:52 terraform-provider-aws: created by net/rpc.(*Server).ServeCodec
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:476 +0x44a
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 1 [IO wait]:
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).Wait(0xc208011330, 0x72, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:84 +0x47
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).WaitRead(0xc208011330, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:89 +0x43
+2015/10/06 12:55:52 terraform-provider-aws: net.(*netFD).accept(0xc2080112d0, 0x0, 0x134bd48, 0xc20807e968)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_unix.go:419 +0x40b
+2015/10/06 12:55:52 terraform-provider-aws: net.(*UnixListener).AcceptUnix(0xc20801f660, 0x36820, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/unixsock_posix.go:282 +0x56
+2015/10/06 12:55:52 terraform-provider-aws: net.(*UnixListener).Accept(0xc20801f660, 0x0, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/unixsock_posix.go:293 +0x4c
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.(*Server).Accept(0xc20807e850, 0x134c798, 0xc20801f660)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:33 +0x37
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/plugin.Serve(0xc20807e830)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/plugin/server.go:88 +0x7e8
+2015/10/06 12:55:52 terraform-provider-aws: main.main()
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/builtin/bins/provider-aws/main.go:11 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 5 [syscall]:
+2015/10/06 12:55:52 terraform-provider-aws: os/signal.loop()
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/os/signal/signal_unix.go:21 +0x1f
+2015/10/06 12:55:52 terraform-provider-aws: created by os/signal.init·1
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/os/signal/signal_unix.go:27 +0x35
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 7 [chan receive]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/plugin.func·007()
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/plugin/server.go:79 +0x69
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/terraform/plugin.Serve
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/plugin/server.go:85 +0x7c4
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 8 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Stream).Read(0xc20802e780, 0xc2080d8000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/stream.go:125 +0x3ab
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).fill(0xc208052960)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:97 +0x1ce
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).Read(0xc208052960, 0xc20807e9f0, 0x1, 0x9, 0x2592, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:174 +0x26c
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadAtLeast(0x134d8f0, 0xc208052960, 0xc20807e9f0, 0x1, 0x9, 0x1, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:298 +0xf1
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadFull(0x134d8f0, 0xc208052960, 0xc20807e9f0, 0x1, 0x9, 0x2c, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:316 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.decodeUintReader(0x134d8f0, 0xc208052960, 0xc20807e9f0, 0x9, 0x9, 0x0, 0x1, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decode.go:121 +0x99
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).recvMessage(0xc208066580, 0xc2080905a0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:76 +0x55
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).decodeTypeSequence(0xc208066580, 0xc20801fd00, 0x16)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:140 +0x47
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).DecodeValue(0xc208066580, 0x6c6cc0, 0xc20801fd60, 0x16, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:208 +0x192
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).Decode(0xc208066580, 0x6c6cc0, 0xc20801fd60, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:185 +0x297
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*gobServerCodec).ReadRequestHeader(0xc20807ca50, 0xc20801fd60, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:402 +0x5e
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).readRequestHeader(0xc208035ec0, 0x134da50, 0xc20807ca50, 0x0, 0x0, 0xc20801fd60, 0xc20807ea00, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:575 +0x97
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).readRequest(0xc208035ec0, 0x134da50, 0xc20807ca50, 0xc208066480, 0xc20801f7e0, 0x6e8860, 0x0, 0x0, 0x0, 0x0, ...)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:542 +0xa2
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).ServeCodec(0xc208035ec0, 0x134da50, 0xc20807ca50)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:461 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).ServeConn(0xc208035ec0, 0x134d978, 0xc20802e780)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:453 +0x208
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.(*Server).ServeConn(0xc20807e850, 0x134d890, 0xc2080380a8)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:76 +0x530
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/terraform/rpc.(*Server).Accept
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:39 +0x173
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 9 [IO wait]:
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).Wait(0xc208011410, 0x72, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:84 +0x47
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).WaitRead(0xc208011410, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:89 +0x43
+2015/10/06 12:55:52 terraform-provider-aws: net.(*netFD).Read(0xc2080113b0, 0xc20807a000, 0x1000, 0x1000, 0x0, 0x134bd48, 0xc208371e20)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_unix.go:242 +0x40f
+2015/10/06 12:55:52 terraform-provider-aws: net.(*conn).Read(0xc2080380a8, 0xc20807a000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/net.go:121 +0xdc
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).fill(0xc208052540)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:97 +0x1ce
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).Read(0xc208052540, 0xc20807e980, 0xc, 0xc, 0xc208371e10, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:174 +0x26c
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadAtLeast(0x134d8f0, 0xc208052540, 0xc20807e980, 0xc, 0xc, 0xc, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:298 +0xf1
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadFull(0x134d8f0, 0xc208052540, 0xc20807e980, 0xc, 0xc, 0xc, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:316 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Session).recvLoop(0xc2080540b0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:381 +0x10d
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Session).recv(0xc2080540b0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:369 +0x28
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/yamux.newSession
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:104 +0x499
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 10 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Session).send(0xc2080540b0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:331 +0x554
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/yamux.newSession
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:105 +0x4b3
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 11 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Session).keepalive(0xc2080540b0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:287 +0x106
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/yamux.newSession
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:107 +0x4de
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 13 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Session).AcceptStream(0xc2080540b0, 0xc200000003, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/session.go:191 +0x1a8
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.(*muxBroker).Run(0xc20801f7a0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/mux_broker.go:107 +0x37
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/terraform/rpc.(*Server).ServeConn
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:65 +0x388
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 34 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/yamux.(*Stream).Read(0xc20802ea00, 0xc20800f000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/yamux/stream.go:125 +0x3ab
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).fill(0xc2080530e0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:97 +0x1ce
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).Read(0xc2080530e0, 0xc208158c30, 0x1, 0x9, 0xc20809d858, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:174 +0x26c
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadAtLeast(0x134d8f0, 0xc2080530e0, 0xc208158c30, 0x1, 0x9, 0x1, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:298 +0xf1
+2015/10/06 12:55:52 terraform-provider-aws: io.ReadFull(0x134d8f0, 0xc2080530e0, 0xc208158c30, 0x1, 0x9, 0x1, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/io/io.go:316 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.decodeUintReader(0x134d8f0, 0xc2080530e0, 0xc208158c30, 0x9, 0x9, 0x0, 0x1, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decode.go:121 +0x99
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).recvMessage(0xc208066780, 0xc208090d80)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:76 +0x55
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).decodeTypeSequence(0xc208066780, 0xc208142f00, 0x16)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:140 +0x47
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).DecodeValue(0xc208066780, 0x6c6cc0, 0xc208142f20, 0x16, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:208 +0x192
+2015/10/06 12:55:52 terraform-provider-aws: encoding/gob.(*Decoder).Decode(0xc208066780, 0x6c6cc0, 0xc208142f20, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/encoding/gob/decoder.go:185 +0x297
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*gobServerCodec).ReadRequestHeader(0xc20817be90, 0xc208142f20, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:402 +0x5e
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).readRequestHeader(0xc20813cec0, 0x134da50, 0xc20817be90, 0x0, 0x0, 0xc208142f20, 0xc208158c00, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:575 +0x97
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).readRequest(0xc20813cec0, 0x134da50, 0xc20817be90, 0xc208066300, 0xc2081439c0, 0x6c0540, 0x0, 0x0, 0x0, 0x0, ...)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:542 +0xa2
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).ServeCodec(0xc20813cec0, 0x134da50, 0xc20817be90)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:461 +0x6d
+2015/10/06 12:55:52 terraform-provider-aws: net/rpc.(*Server).ServeConn(0xc20813cec0, 0x134d978, 0xc20802ea00)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/rpc/server.go:453 +0x208
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.serve(0x134d978, 0xc20802ea00, 0xb54750, 0x10, 0xa631a0, 0xc208142f00)
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:146 +0x1f9
+2015/10/06 12:55:52 terraform-provider-aws: github.com/hashicorp/terraform/rpc.func·001()
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:102 +0x265
+2015/10/06 12:55:52 terraform-provider-aws: created by github.com/hashicorp/terraform/rpc.(*dispenseServer).ResourceProvider
+2015/10/06 12:55:52 terraform-provider-aws: 	/private/tmp/terraform20150808-73466-1a6c1s5/terraform-0.6.2/src/github.com/hashicorp/terraform/rpc/server.go:103 +0x107
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 40 [IO wait]:
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).Wait(0xc2080d55d0, 0x72, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:84 +0x47
+2015/10/06 12:55:52 terraform-provider-aws: net.(*pollDesc).WaitRead(0xc2080d55d0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_poll_runtime.go:89 +0x43
+2015/10/06 12:55:52 terraform-provider-aws: net.(*netFD).Read(0xc2080d5570, 0xc2082cbc00, 0x400, 0x400, 0x0, 0x134bd48, 0xc208371e00)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/fd_unix.go:242 +0x40f
+2015/10/06 12:55:52 terraform-provider-aws: net.(*conn).Read(0xc208038a20, 0xc2082cbc00, 0x400, 0x400, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/net.go:121 +0xdc
+2015/10/06 12:55:52 terraform-provider-aws: crypto/tls.(*block).readFromUntil(0xc20836cb40, 0x134e358, 0xc208038a20, 0x5, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/crypto/tls/conn.go:454 +0xe6
+2015/10/06 12:55:52 terraform-provider-aws: crypto/tls.(*Conn).readRecord(0xc208062000, 0x17, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/crypto/tls/conn.go:539 +0x2da
+2015/10/06 12:55:52 terraform-provider-aws: crypto/tls.(*Conn).Read(0xc208062000, 0xc2080aa000, 0x1000, 0x1000, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/crypto/tls/conn.go:904 +0x166
+2015/10/06 12:55:52 terraform-provider-aws: net/http.noteEOFReader.Read(0x1357120, 0xc208062000, 0xc208054528, 0xc2080aa000, 0x1000, 0x1000, 0x826f00, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/http/transport.go:1270 +0x6e
+2015/10/06 12:55:52 terraform-provider-aws: net/http.(*noteEOFReader).Read(0xc2083753c0, 0xc2080aa000, 0x1000, 0x1000, 0xc208012000, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	<autogenerated>:125 +0xd4
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).fill(0xc20837e3c0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:97 +0x1ce
+2015/10/06 12:55:52 terraform-provider-aws: bufio.(*Reader).Peek(0xc20837e3c0, 0x1, 0x0, 0x0, 0x0, 0x0, 0x0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/bufio/bufio.go:132 +0xf0
+2015/10/06 12:55:52 terraform-provider-aws: net/http.(*persistConn).readLoop(0xc2080544d0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/http/transport.go:842 +0xa4
+2015/10/06 12:55:52 terraform-provider-aws: created by net/http.(*Transport).dialConn
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/http/transport.go:660 +0xc9f
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 49 [syscall, locked to thread]:
+2015/10/06 12:55:52 terraform-provider-aws: runtime.goexit()
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/runtime/asm_amd64.s:2232 +0x1
+2015/10/06 12:55:52 terraform-provider-aws: 
+2015/10/06 12:55:52 terraform-provider-aws: goroutine 41 [select]:
+2015/10/06 12:55:52 terraform-provider-aws: net/http.(*persistConn).writeLoop(0xc2080544d0)
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/http/transport.go:945 +0x41d
+2015/10/06 12:55:52 terraform-provider-aws: created by net/http.(*Transport).dialConn
+2015/10/06 12:55:52 terraform-provider-aws: 	/usr/local/Cellar/go/1.4.2/libexec/src/net/http/transport.go:661 +0xcbc
+2015/10/06 12:55:52 [DEBUG] /usr/local/bin/terraform-provider-aws: plugin process exited
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_security_group.BounceBox: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_security_group.BounceBox: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: aws_security_group.BounceBox: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_security_group.BounceBox: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_subnet.PrimaryPublic: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_subnet.PrimaryPublic: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: aws_subnet.PrimaryPublic: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_subnet.PrimaryPublic: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_internet_gateway.2015AWSHackathon-Gateway: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_internet_gateway.2015AWSHackathon-Gateway: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: aws_internet_gateway.2015AWSHackathon-Gateway: unexpected EOF
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_internet_gateway.2015AWSHackathon-Gateway: unexpected EOF
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInterpolate
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalCountFixZeroOneBoundary
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: expanding/walking dynamic subgraph
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.ResourceCountTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [TRACE] Graph after step *terraform.RootTransformer:
+
+aws_main_route_table_association.a
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: walking
+2015/10/06 12:55:52 [DEBUG] vertex root.aws_main_route_table_association.a: evaluating
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: terraform.EvalNoop
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalInstanceInfo
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalOpFilter
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalSequence
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalGetProvider
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalReadState
+2015/10/06 12:55:52 [DEBUG] root: eval: *terraform.EvalRefresh
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalRefresh, err: aws_main_route_table_association.a: connection is shut down
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_main_route_table_association.a: connection is shut down
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalOpFilter, err: aws_main_route_table_association.a: connection is shut down
+2015/10/06 12:55:52 [ERROR] root: eval: *terraform.EvalSequence, err: aws_main_route_table_association.a: connection is shut down
+2015/10/06 12:55:52 [DEBUG] vertex root.root: walking
+2015/10/06 12:55:52 waiting for all plugin processes to complete...
+2015/10/06 12:55:52 [DEBUG] /usr/local/bin/terraform-provisioner-chef: plugin process exited
+2015/10/06 12:55:52 [DEBUG] /usr/local/bin/terraform-provisioner-file: plugin process exited
+2015/10/06 12:55:52 [DEBUG] /usr/local/bin/terraform-provisioner-local-exec: plugin process exited
+2015/10/06 12:55:52 [DEBUG] /usr/local/bin/terraform-provisioner-remote-exec: plugin process exited
