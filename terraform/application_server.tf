@@ -6,6 +6,7 @@ resource "aws_instance" "appserver1" {
     associate_public_ip_address = "true"
     availability_zone = "us-east-1e"
     vpc_security_group_ids = ["${aws_security_group.appserver.id}"]
+    user_data = "${file("appserverbootstrap.sh")}"
     tags {
         Name = "appserver1"
     }
@@ -22,6 +23,7 @@ resource "aws_instance" "appserver2" {
     associate_public_ip_address = "true"
     availability_zone = "us-east-1e"
     vpc_security_group_ids = ["${aws_security_group.appserver.id}"]
+    user_data = "${file("appserverbootstrap.sh")}"
     tags {
         Name = "appserver2"
     }
